@@ -1,0 +1,950 @@
+{
+    "success": "true",
+    "message": "games retrieved successfully",
+    "games": [{
+        "_id": "5c20c677d5659baa40adf928",
+        "event_key": "4343",
+        "event_date": "2018-04-18",
+        "event_time": "01:00",
+        "event_home_team": "Toronto Raptors",
+        "home_team_key": "51",
+        "event_away_team": "Washington Wizards",
+        "away_team_key": "55",
+        "event_final_result": "130 - 119",
+        "event_status": "3'",
+        "country_name": "USA",
+        "league_name": "NBA",
+        "league_key": "787",
+        "league_round": "1/8-finals",
+        "league_season": "2017/2018",
+        "event_live": "1",
+        "scores": {
+            "1stQuarter": [{
+                "score_home": "44",
+                "score_away": "27"
+            }],
+            "2ndQuarter": [{
+                "score_home": "32",
+                "score_away": "31"
+            }],
+            "3rdQuarter": [{
+                "score_home": "24",
+                "score_away": "32"
+            }],
+            "4thQuarter": [{
+                "score_home": "30",
+                "score_away": "29"
+            }]
+        },
+        "statistics": {
+            "Match": [{
+                    "type": "Field Goals Attempted",
+                    "home": "86",
+                    "away": "84"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "45",
+                    "away": "42"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "52.3%",
+                    "away": "50%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "52",
+                    "away": "62"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "32",
+                    "away": "32"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "61.5%",
+                    "away": "51.6%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "34",
+                    "away": "22"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "13",
+                    "away": "10"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "38.2%",
+                    "away": "45.5%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "33",
+                    "away": "28"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "27",
+                    "away": "25"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "81.8%",
+                    "away": "89.3%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "9",
+                    "away": "3"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "38",
+                    "away": "29"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "47",
+                    "away": "32"
+                },
+                {
+                    "type": "Assists",
+                    "home": "24",
+                    "away": "26"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "7",
+                    "away": "3"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "13",
+                    "away": "9"
+                },
+                {
+                    "type": "Steals",
+                    "home": "5",
+                    "away": "7"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "27",
+                    "away": "24"
+                },
+                {
+                    "type": "Field Goals Attempted",
+                    "home": "27",
+                    "away": "26"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "16",
+                    "away": "11"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "59.3%",
+                    "away": "42.3%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "14",
+                    "away": "18"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "9",
+                    "away": "8"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "64.3%",
+                    "away": "44.4%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "13",
+                    "away": "8"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "7",
+                    "away": "3"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "53.8%",
+                    "away": "37.5%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "6",
+                    "away": "2"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "5",
+                    "away": "2"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "83.3%",
+                    "away": "100%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "4",
+                    "away": "1"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "13",
+                    "away": "7"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "17",
+                    "away": "8"
+                },
+                {
+                    "type": "Assists",
+                    "home": "10",
+                    "away": "7"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "2",
+                    "away": "0"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "3",
+                    "away": "3"
+                },
+                {
+                    "type": "Steals",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "5",
+                    "away": "6"
+                },
+                {
+                    "type": "Field Goals Attempted",
+                    "home": "23",
+                    "away": "17"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "12",
+                    "away": "11"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "52.2%",
+                    "away": "64.7%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "14",
+                    "away": "15"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "8",
+                    "away": "11"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "57.1%",
+                    "away": "73.3%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "9",
+                    "away": "2"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "4",
+                    "away": "0"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "44.4%",
+                    "away": "0%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "4",
+                    "away": "11"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "4",
+                    "away": "9"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "100%",
+                    "away": "81.8%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "1",
+                    "away": "0"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "8",
+                    "away": "8"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "9",
+                    "away": "8"
+                },
+                {
+                    "type": "Assists",
+                    "home": "6",
+                    "away": "9"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "4",
+                    "away": "3"
+                },
+                {
+                    "type": "Steals",
+                    "home": "2",
+                    "away": "2"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "9",
+                    "away": "4"
+                },
+                {
+                    "type": "Field Goals Attempted",
+                    "home": "19",
+                    "away": "21"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "9",
+                    "away": "12"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "47.4%",
+                    "away": "57.1%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "13",
+                    "away": "16"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "9",
+                    "away": "9"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "69.2%",
+                    "away": "56.3%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "6",
+                    "away": "5"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "0",
+                    "away": "3"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "0%",
+                    "away": "60%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "10",
+                    "away": "6"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "6",
+                    "away": "5"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "60%",
+                    "away": "83.3%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "7",
+                    "away": "8"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "9",
+                    "away": "9"
+                },
+                {
+                    "type": "Assists",
+                    "home": "4",
+                    "away": "4"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "1",
+                    "away": "0"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "3",
+                    "away": "0"
+                },
+                {
+                    "type": "Steals",
+                    "home": "0",
+                    "away": "3"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "4",
+                    "away": "6"
+                },
+                {
+                    "type": "Field Goals Attempted",
+                    "home": "17",
+                    "away": "20"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "8",
+                    "away": "8"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "47.1%",
+                    "away": "40%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "11",
+                    "away": "13"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "6",
+                    "away": "4"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "54.5%",
+                    "away": "30.8%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "6",
+                    "away": "7"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "2",
+                    "away": "4"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "33.3%",
+                    "away": "57.1%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "13",
+                    "away": "9"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "12",
+                    "away": "9"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "92.3%",
+                    "away": "100%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "10",
+                    "away": "6"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "12",
+                    "away": "7"
+                },
+                {
+                    "type": "Assists",
+                    "home": "4",
+                    "away": "6"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "2",
+                    "away": "2"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "3",
+                    "away": "3"
+                },
+                {
+                    "type": "Steals",
+                    "home": "1",
+                    "away": "1"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "9",
+                    "away": "8"
+                }
+            ],
+            "1stQuarter": [{
+                    "type": "Field Goals Attempted",
+                    "home": "27",
+                    "away": "26"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "16",
+                    "away": "11"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "59.3%",
+                    "away": "42.3%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "14",
+                    "away": "18"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "9",
+                    "away": "8"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "64.3%",
+                    "away": "44.4%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "13",
+                    "away": "8"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "7",
+                    "away": "3"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "53.8%",
+                    "away": "37.5%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "6",
+                    "away": "2"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "5",
+                    "away": "2"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "83.3%",
+                    "away": "100%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "4",
+                    "away": "1"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "13",
+                    "away": "7"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "17",
+                    "away": "8"
+                },
+                {
+                    "type": "Assists",
+                    "home": "10",
+                    "away": "7"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "2",
+                    "away": "0"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "3",
+                    "away": "3"
+                },
+                {
+                    "type": "Steals",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "5",
+                    "away": "6"
+                }
+            ],
+            "2ndQuarter": [{
+                    "type": "Field Goals Attempted",
+                    "home": "23",
+                    "away": "17"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "12",
+                    "away": "11"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "52.2%",
+                    "away": "64.7%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "14",
+                    "away": "15"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "8",
+                    "away": "11"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "57.1%",
+                    "away": "73.3%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "9",
+                    "away": "2"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "4",
+                    "away": "0"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "44.4%",
+                    "away": "0%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "4",
+                    "away": "11"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "4",
+                    "away": "9"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "100%",
+                    "away": "81.8%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "1",
+                    "away": "0"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "8",
+                    "away": "8"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "9",
+                    "away": "8"
+                },
+                {
+                    "type": "Assists",
+                    "home": "6",
+                    "away": "9"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "4",
+                    "away": "3"
+                },
+                {
+                    "type": "Steals",
+                    "home": "2",
+                    "away": "2"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "9",
+                    "away": "4"
+                }
+            ],
+            "3rdQuarter": [{
+                    "type": "Field Goals Attempted",
+                    "home": "19",
+                    "away": "21"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "9",
+                    "away": "12"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "47.4%",
+                    "away": "57.1%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "13",
+                    "away": "16"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "9",
+                    "away": "9"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "69.2%",
+                    "away": "56.3%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "6",
+                    "away": "5"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "0",
+                    "away": "3"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "0%",
+                    "away": "60%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "10",
+                    "away": "6"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "6",
+                    "away": "5"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "60%",
+                    "away": "83.3%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "7",
+                    "away": "8"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "9",
+                    "away": "9"
+                },
+                {
+                    "type": "Assists",
+                    "home": "4",
+                    "away": "4"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "1",
+                    "away": "0"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "3",
+                    "away": "0"
+                },
+                {
+                    "type": "Steals",
+                    "home": "0",
+                    "away": "3"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "4",
+                    "away": "6"
+                }
+            ],
+            "4thQuarter": [{
+                    "type": "Field Goals Attempted",
+                    "home": "17",
+                    "away": "20"
+                },
+                {
+                    "type": "Field Goals Made",
+                    "home": "8",
+                    "away": "8"
+                },
+                {
+                    "type": "Field Goals %",
+                    "home": "47.1%",
+                    "away": "40%"
+                },
+                {
+                    "type": "2-Point Field G. Attempted",
+                    "home": "11",
+                    "away": "13"
+                },
+                {
+                    "type": "2-Point Field Goals Made",
+                    "home": "6",
+                    "away": "4"
+                },
+                {
+                    "type": "2-Point Field Goals %",
+                    "home": "54.5%",
+                    "away": "30.8%"
+                },
+                {
+                    "type": "3-Point Field G. Attempted",
+                    "home": "6",
+                    "away": "7"
+                },
+                {
+                    "type": "3-Point Field Goals Made",
+                    "home": "2",
+                    "away": "4"
+                },
+                {
+                    "type": "3-Point Field Goals %",
+                    "home": "33.3%",
+                    "away": "57.1%"
+                },
+                {
+                    "type": "Free Throws Attempted",
+                    "home": "13",
+                    "away": "9"
+                },
+                {
+                    "type": "Free Throws Made",
+                    "home": "12",
+                    "away": "9"
+                },
+                {
+                    "type": "Free Throws %",
+                    "home": "92.3%",
+                    "away": "100%"
+                },
+                {
+                    "type": "Offensive Rebounds",
+                    "home": "2",
+                    "away": "1"
+                },
+                {
+                    "type": "Defensive Rebounds",
+                    "home": "10",
+                    "away": "6"
+                },
+                {
+                    "type": "Total Rebounds",
+                    "home": "12",
+                    "away": "7"
+                },
+                {
+                    "type": "Assists",
+                    "home": "4",
+                    "away": "6"
+                },
+                {
+                    "type": "Blocks",
+                    "home": "2",
+                    "away": "2"
+                },
+                {
+                    "type": "Turnovers",
+                    "home": "3",
+                    "away": "3"
+                },
+                {
+                    "type": "Steals",
+                    "home": "1",
+                    "away": "1"
+                },
+                {
+                    "type": "Personal Fouls",
+                    "home": "9",
+                    "away": "8"
+                }
+            ]
+        },
+        "createdAt": "2018-12-24T11:43:51.843Z",
+        "updatedAt": "2018-12-24T11:43:51.843Z",
+        "__v": 0
+    }]
+}
