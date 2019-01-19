@@ -40,7 +40,7 @@ class Scoreboard extends Component {
           <span>E</span>
         </div>
       );
-    } else if (game.league === "NBA") {
+    } else {
       return (
         <div className="boxscore__team__results">
           <span>T</span>
@@ -64,6 +64,20 @@ class Scoreboard extends Component {
           <span>{game[side + "_totals"].points}</span>
         </div>
       );
+    } else if (game.league === "NHL") {
+      // DISCLAIMER: not given json object keys for NHL games, so keys/properties below are assumed
+      return (
+        <div className="boxscore__team__results">
+          <span>{game[side + "_totals"].goals}</span>
+        </div>
+      );
+    } else if (game.league === "NFL") {
+      // DISCLAIMER: not given json object keys for NFL games, so keys/properties below are assumed
+      return (
+        <div className="boxscore__team__results">
+          <span>{game[side + "_totals"].points}</span>
+        </div>
+      );
     }
   };
 
@@ -71,6 +85,14 @@ class Scoreboard extends Component {
     let currentPeriod = 0;
     if (game.event_information.status === "completed") {
       currentPeriod = "Final";
+    } else if (game.event_information.status === "scheduled") {
+      // DISCLAIMER: above status conditional depends on json status being 'scheduled' if a game has not begun
+      let gameTime = new Date(game.event_information.start_date_time);
+      currentPeriod = gameTime.toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true
+      });
     } else {
       currentPeriod = game.away_period_scores.length;
     }
@@ -78,26 +100,43 @@ class Scoreboard extends Component {
       let inningTopBottom = "";
       if (game.away_period_scores.length > game.home_period_scores.length) {
         inningTopBottom = "Top ";
-      } else if (game.away_period_scores.length === game.home_period_scores.length && currentPeriod !== "Final") {
+      } else if (
+        game.away_period_scores.length === game.home_period_scores.length &&
+        currentPeriod !== "Final"
+      ) {
         inningTopBottom = "Btm ";
       }
       return (
         <div className="boxscore__details__info">
-          <strong>
-            {`${inningTopBottom}  ${currentPeriod}`}
-          </strong>
+          <strong>{`${inningTopBottom}  ${currentPeriod}${this.suffixOf(currentPeriod)}`}</strong>
         </div>
       );
     } else if (game.league === "NBA") {
       return (
         <div className="boxscore__details__info">
-          <strong>
-            {currentPeriod}
-          </strong>
+          <strong>{currentPeriod}{this.suffixOf(currentPeriod)}</strong>
         </div>
       );
     }
   };
+
+  suffixOf(i) {
+    if (isNaN(i)) {
+      return "";
+    }
+    let j = i % 10;
+    let k = i % 100;
+    if (j === 1 && k !== 11) {
+      return i + "st";
+    }
+    if (j === 2 && k !== 12) {
+      return i + "nd";
+    }
+    if (j === 3 && k !== 13) {
+      return i + "rd";
+    }
+    return i + "th";
+  }
 
   render() {
     return (
@@ -126,8 +165,6 @@ class Scoreboard extends Component {
               away team errors
               away team runs
           */
-
-          console.log(game);
 
           let maxPeriod = game.away_period_scores.length;
           // if MLB and we are not over 9 innings, set maxPeriod to 9
