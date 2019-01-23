@@ -17,7 +17,7 @@ class Scoreboard extends Component {
   getScores = () => {
     let self = this;
     axios
-      .get("https://barstool-score-burger.herokuapp.com/api/v1/games")
+      .get("http://localhost:8440/api/v1/games")
       .then(function(response) {
         // handle success
         self.setState({ games: response.data.games });
@@ -25,13 +25,40 @@ class Scoreboard extends Component {
       .catch(function(error) {
         // handle error
         console.log(error);
-      })
-      .then(function() {
-        // always executed
       });
   };
 
-  renderUnits = game => {
+  renderPeriodUnits = game => {
+    if (game.league === "MLB") {
+      return (
+        <div className="boxscore__team__units">
+          {Array.from(Array(game.maxPeriod).keys()).map((obj, i) => {
+            return <span key={i}>{i + 1}</span>;
+          })}
+        </div>
+      );
+    } else if (
+      game.league === "NBA" ||
+      game.league === "NFL" ||
+      game.leauge === "NHL"
+    ) {
+      return (
+        <div className="boxscore__team__units">
+          {Array.from(Array(game.maxPeriod).keys()).map((obj, i) => {
+            if (i === 4) {
+              return <span key={i}>OT</span>;
+            }
+            if (i > 4) {
+              return <span key={i}>{i - 3}OT</span>;
+            }
+            return <span key={i}>{i + 1}</span>;
+          })}
+        </div>
+      );
+    }
+  };
+
+  renderEndUnits = game => {
     if (game.league === "MLB") {
       return (
         <div className="boxscore__team__results">
@@ -49,33 +76,86 @@ class Scoreboard extends Component {
     }
   };
 
-  renderScores = (game, side) => {
+  renderName = (game, side) => {
+    let otherSide;
+    if (side === "home") {
+      otherSide = "away";
+    } else {
+      otherSide = "home";
+    }
+    let sideWin;
     if (game.league === "MLB") {
+      sideWin =
+        game[side + "_batter_totals"].runs >
+        game[otherSide + "_batter_totals"].runs;
+    } else if (game.league === "NHL") {
+      sideWin =
+        game[side + "_totals"].goals > game[otherSide + "_totals"].goals;
+    } else if (game.league === "NFL" || game.league === "NBA") {
+      sideWin =
+        game[side + "_totals"].points > game[otherSide + "_totals"].points;
+    }
+    return (
+      <label className={sideWin ? "win" : "loss"}>
+        {game[side + "_team"].abbreviation}
+      </label>
+    );
+  };
+
+  renderScores = (game, side) => {
+    let otherSide;
+    if (side === "home") {
+      otherSide = "away";
+    } else {
+      otherSide = "home";
+    }
+    if (game.league === "MLB") {
+      let sideWin =
+        game[side + "_batter_totals"].runs >
+        game[otherSide + "_batter_totals"].runs;
       return (
         <div className="boxscore__team__results">
-          <span>{game[side + "_batter_totals"].runs}</span>
-          <span>{game[side + "_batter_totals"].hits}</span>
-          <span>{game[side + "_errors"]}</span>
+          <span className={sideWin ? "win" : "loss"}>
+            {game[side + "_batter_totals"].runs}
+          </span>
+          <span className={sideWin ? "win" : "loss"}>
+            {game[side + "_batter_totals"].hits}
+          </span>
+          <span className={sideWin ? "win" : "loss"}>
+            {game[side + "_errors"]}
+          </span>
         </div>
       );
     } else if (game.league === "NBA") {
+      let sideWin =
+        game[side + "_totals"].points > game[otherSide + "_totals"].points;
       return (
         <div className="boxscore__team__results">
-          <span>{game[side + "_totals"].points}</span>
+          <span className={sideWin ? "win" : "loss"}>
+            {game[side + "_totals"].points}
+          </span>
         </div>
       );
     } else if (game.league === "NHL") {
       // DISCLAIMER: not given json object keys for NHL games, so keys/properties below are assumed
+      let sideWin =
+        game[side + "_totals"].goals > game[otherSide + "_totals"].goals;
       return (
         <div className="boxscore__team__results">
-          <span>{game[side + "_totals"].goals}</span>
+          <span className={sideWin ? "win" : "loss"}>
+            {game[side + "_totals"].goals}
+          </span>
         </div>
       );
     } else if (game.league === "NFL") {
       // DISCLAIMER: not given json object keys for NFL games, so keys/properties below are assumed
+      let sideWin =
+        game[side + "_totals"].points > game[otherSide + "_totals"].points;
       return (
         <div className="boxscore__team__results">
-          <span>{game[side + "_totals"].points}</span>
+          <span className={sideWin ? "win" : "loss"}>
+            {game[side + "_totals"].points}
+          </span>
         </div>
       );
     }
@@ -108,19 +188,24 @@ class Scoreboard extends Component {
       }
       return (
         <div className="boxscore__details__info">
-          <strong>{`${inningTopBottom}  ${currentPeriod}${this.suffixOf(currentPeriod)}`}</strong>
+          <strong>{`${inningTopBottom}  ${currentPeriod}${this.suffixOf(
+            currentPeriod
+          )}`}</strong>
         </div>
       );
     } else if (game.league === "NBA") {
       return (
         <div className="boxscore__details__info">
-          <strong>{currentPeriod}{this.suffixOf(currentPeriod)}</strong>
+          <strong>
+            {currentPeriod}
+            {this.suffixOf(currentPeriod)}
+          </strong>
         </div>
       );
     }
   };
 
-  suffixOf(i) {
+  suffixOf = i => {
     if (isNaN(i)) {
       return "";
     }
@@ -136,12 +221,11 @@ class Scoreboard extends Component {
       return i + "rd";
     }
     return i + "th";
-  }
+  };
 
   render() {
     return (
       <div>
-        <h2>Stool Scoreboard</h2>
         {this.state.games.map((game, i) => {
           /*
           Game
@@ -166,25 +250,21 @@ class Scoreboard extends Component {
               away team runs
           */
 
-          let maxPeriod = game.away_period_scores.length;
+          game.maxPeriod = game.away_period_scores.length;
           // if MLB and we are not over 9 innings, set maxPeriod to 9
-          if (game.league === "MLB" && maxPeriod < 9) maxPeriod = 9;
+          if (game.league === "MLB" && game.maxPeriod < 9) game.maxPeriod = 9;
           // if NBA and we are not over 4 quarters, set maxPeriod to 4
-          if (game.league === "NBA" && maxPeriod < 4) maxPeriod = 4;
+          if (game.league === "NBA" && game.maxPeriod < 4) game.maxPeriod = 4;
 
           return (
             <div className="boxscore" key={i}>
               <div className="boxscore__team boxscore__team--header">
                 <label />
-                <div className="boxscore__team__units">
-                  {Array.from(Array(maxPeriod).keys()).map((obj, i) => {
-                    return <span key={i}>{i + 1}</span>;
-                  })}
-                </div>
-                {this.renderUnits(game)}
+                {this.renderPeriodUnits(game)}
+                {this.renderEndUnits(game)}
               </div>
               <div className="boxscore__team boxscore__team--away">
-                <label>{game.away_team.abbreviation}</label>
+                {this.renderName(game, "away")}
                 <div className="boxscore__team__units">
                   {game.away_period_scores.map((score, i) => {
                     return <span key={i}>{score}</span>;
@@ -193,7 +273,7 @@ class Scoreboard extends Component {
                 {this.renderScores(game, "away")}
               </div>
               <div className="boxscore__team boxscore__team--home">
-                <label>{game.home_team.abbreviation}</label>
+                {this.renderName(game, "home")}
                 <div className="boxscore__team__units">
                   {game.home_period_scores.map((score, i) => {
                     return <span key={i}>{score}</span>;
