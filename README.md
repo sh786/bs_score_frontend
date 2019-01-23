@@ -7,3 +7,5 @@ npm start
 ```
 
 This react application runs on http://localhost:3000 and was scaffolded using [Create React App](https://github.com/facebook/create-react-app).
+
+This code was developed for the [Barstool Boxscore Challenge](https://github.com/BarstoolSports/fullstack-challenge).
